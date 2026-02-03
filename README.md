@@ -71,20 +71,20 @@ eda-agent/
 
 ## 📦Libraries and Tools used
 - **pandas** (schema.py, analyzer.py)
-Used for loading datasets, column-wise analysis, missing value detection, and statistics.
+  - Used for loading datasets, column-wise analysis, missing value detection, and statistics.
 - **numpy**  (schema.py)
-Used for numerical computations such as skewness and range calculations.
+  - Used for numerical computations such as skewness and range calculations.
 - **matplotlib/seaborn** (visualizer.py)
-Used for generating and saving EDA visualizations.
+  - Used for generating and saving EDA visualizations.
 - **Python (3.12.10)**
-Core language used to build the agent logic and workflow.
+  - Core language used to build the agent logic and workflow.
 
 ## 📊Dataset
-**Dataset Name:** Titanic – Machine Learning from Disaster
-**Source:** Kaggle
-**Type:** Tabular data (CSV)
-**Target Variable:** Survived
-The dataset contains a mix of:
+- **Dataset Name:** Titanic – Machine Learning from Disaster
+- **Source:** Kaggle
+- **Type:** Tabular data (CSV)
+- **Target Variable:** Survived
+### The dataset contains a mix of:
 - Numerical features (Age, Fare, etc.)
 - Categorical features (Sex, Embarked, etc.)
 - Missing values
