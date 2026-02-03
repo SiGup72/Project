@@ -28,6 +28,7 @@ This project was chosen to:
 - Built with a clean, modular, and easy-to-extend Python code structure
 ## 🧠How the Agent works
 The data analysis agent follows a structured workflow:
+
 flowchart TD
     A[Input Dataset (CSV)] --> B[Schema Compression]
     B --> C[Check Agent Memory]
@@ -35,6 +36,7 @@ flowchart TD
     D --> E[Run EDA Analysis]
     E --> F[Store Insights in Memory]
     F --> G[Generate Plots & Summary]
+    
 This approach makes the agent efficient, stateful, and reusable.
 
 ## Project Structure
