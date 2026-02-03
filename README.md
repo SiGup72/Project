@@ -12,17 +12,34 @@ I am a 2nd-year Data Science student looking to strengthen my fundamentals by bu
 - Repetitive
 - Manual
 - Inefficient when reused across datasets
+
 This project was chosen to:
 - Practice clean Python project structure
 - Understand how autonomous systems work
 - Build a reusable and extensible data analysis pipeline
 - Explore how intelligent agents can assist in data analysis without heavy AI/ML models
-## Features
-## How the Agent works
+## ⚙️Features
+- Automatically summarizes the structure of a dataset (columns, data types, missing values)
+- Stores analysis results so the same checks are not repeated
+- Uses simple rule-based logic to decide which EDA step to run next
+- Identifies missing values in the dataset
+- Analyzes data distributions and detects outliers
+- Generates visualizations using matplotlib and seaborn
+- Built with a clean, modular, and easy-to-extend Python code structure
+## 🧠How the Agent works
+The data analysis agent follows a structured workflow:
+flowchart TD
+    A[Input Dataset (CSV)] --> B[Schema Compression]
+    B --> C[Check Agent Memory]
+    C --> D[Decision Engine]
+    D --> E[Run EDA Analysis]
+    E --> F[Store Insights in Memory]
+    F --> G[Generate Plots & Summary]
+This approach makes the agent efficient, stateful, and reusable.
+
 ## Project Structure
 ## Libraries and Tools used
 ## Dataset
-## Flowchart
 ## How to run
 ## Extensibility
 ## License 
