@@ -28,6 +28,8 @@ This project was chosen to:
 - Built with a clean, modular, and easy-to-extend Python code structure
 ## 🧠How the Agent works
 The data analysis agent follows a structured workflow:
+'''
+
 Dataset (CSV)
      ↓
 Schema Compression
@@ -41,7 +43,8 @@ EDA Analysis
 Store Insights
      ↓
 Plots & Summary
-   
+
+'''
 This approach makes the agent efficient, stateful, and reusable.
 
 ## Project Structure
