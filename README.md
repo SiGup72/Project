@@ -1,5 +1,5 @@
 # DATA ANALYSIS AGENT
-## Overview
+## 🔍Overview
 This project implements a Python-based Data Analysis Agent that automates Exploratory Data Analysis (EDA) for tabular datasets. At its core, the agent analyzes a given dataset by compressing the dataset schema and storing analysis insights, instead of repeatedly working on raw data or full analysis history.
 The agent autonomously:
 - Understands the structure of the dataset
