@@ -7,7 +7,16 @@ The agent autonomously:
 - Stores insights in memory
 - Avoids redundant analysis
 The entire system is built using pure Python and lightweight data analysis libraries.
-## Motivation
+## 🎯Motivation
+I am a 2nd-year Data Science student looking to strengthen my fundamentals by building practical, real-world projects instead of relying only on notebooks or tutorials. While learning data analysis, I noticed that exploratory analysis is often:
+- Repetitive
+- Manual
+- Inefficient when reused across datasets
+This project was chosen to:
+- Practice clean Python project structure
+- Understand how autonomous systems work
+- Build a reusable and extensible data analysis pipeline
+- Explore how intelligent agents can assist in data analysis without heavy AI/ML models
 ## Features
 ## How the Agent works
 ## Project Structure
