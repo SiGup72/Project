@@ -7,6 +7,7 @@ The agent autonomously:
 - Stores insights in memory
 - Avoids redundant analysis
 The entire system is built using pure Python and lightweight data analysis libraries.
+
 ## 🎯Motivation
 I am a 2nd-year Data Science student looking to strengthen my fundamentals by building practical, real-world projects instead of relying only on notebooks or tutorials. While learning data analysis, I noticed that exploratory analysis is often:
 - Repetitive
@@ -18,6 +19,7 @@ This project was chosen to:
 - Understand how autonomous systems work
 - Build a reusable and extensible data analysis pipeline
 - Explore how intelligent agents can assist in data analysis without heavy AI/ML models
+  
 ## ⚙️Features
 - Automatically summarizes the structure of a dataset (columns, data types, missing values)
 - Stores analysis results so the same checks are not repeated
@@ -26,10 +28,10 @@ This project was chosen to:
 - Analyzes data distributions and detects outliers
 - Generates visualizations using matplotlib and seaborn
 - Built with a clean, modular, and easy-to-extend Python code structure
+  
 ## 🧠How the Agent works
 The data analysis agent follows a structured workflow:
-'''
-
+```
 Dataset (CSV)
      ↓
 Schema Compression
@@ -43,13 +45,50 @@ EDA Analysis
 Store Insights
      ↓
 Plots & Summary
-
-'''
+```
 This approach makes the agent efficient, stateful, and reusable.
 
-## Project Structure
-## Libraries and Tools used
-## Dataset
+## 📂Project Structure
+```
+eda-agent/
+│
+├── titanic.csv      #data
+│
+├── main.py          # Entry point – runs the agent
+├── schema.py        # Dataset schema compression
+├── memory.py        # Agent memory for storing insights
+├── decision.py      # Rule-based decision logic
+├── analyzer.py      # EDA analysis functions
+├── visualizer.py    # Plotting and visualization
+├── utils.py         # Helper utilities
+│
+├── outputs/
+│   └── plots/       # Generated plots
+│
+├── requirements.txt
+└── README.md
+```
+
+## 📦Libraries and Tools used
+- **pandas** (schema.py, analyzer.py)
+Used for loading datasets, column-wise analysis, missing value detection, and statistics.
+- **numpy**  (schema.py)
+Used for numerical computations such as skewness and range calculations.
+- **matplotlib/seaborn** (visualizer.py)
+Used for generating and saving EDA visualizations.
+- **Python (3.12.10)**
+Core language used to build the agent logic and workflow.
+
+## 📊Dataset
+**Dataset Name:** Titanic – Machine Learning from Disaster
+**Source:** Kaggle
+**Type:** Tabular data (CSV)
+**Target Variable:** Survived
+The dataset contains a mix of:
+- Numerical features (Age, Fare, etc.)
+- Categorical features (Sex, Embarked, etc.)
+- Missing values
+  
 ## How to run
 ## Extensibility
 ## License 
