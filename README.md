@@ -89,6 +89,30 @@ eda-agent/
 - Categorical features (Sex, Embarked, etc.)
 - Missing values
   
-## How to run
-## Extensibility
-## License 
+## 🚀How to run
+1. Install dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Run the agent 
+   ```bash
+   python main.py
+   ```
+
+## 📈 Example Output
+- Identification of missing values in columns like Age and Cabin
+- Detection of skewed distributions (e.g., Fare)
+- Outlier identification in numerical features
+- Automatically generated plots saved in the outputs/plots/ directory
+- Stored insights to avoid re-running the same analysis
+  
+## 🧪Extensibility
+This project can be extended by:
+- Adding correlation analysis
+- Supporting multiple datasets dynamically
+- Connecting to LLM-based systems for natural language insight generation
+- Adding anomaly detection or lightweight ML models
+
+## 📜License 
+MIT License
+
