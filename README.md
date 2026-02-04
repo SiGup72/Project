@@ -52,18 +52,18 @@ This approach makes the agent efficient, stateful, and reusable.
 ```
 eda-agent/
 │
-├── titanic.csv      #data
+├── titanic.csv      # Example dataset used for demonstration
 │
-├── main.py          # Entry point – runs the agent
-├── schema.py        # Dataset schema compression
-├── memory.py        # Agent memory for storing insights
-├── decision.py      # Rule-based decision logic
-├── analyzer.py      # EDA analysis functions
+├── main.py          # Entry point – runs the agent and handles user menu 
+├── schema.py        # Extracts dataset schema: column names, types, missing values
+├── memory.py        # Stores insights in memory to avoid redundant analysis
+├── decision.py      # Rule-based logic to decide which analysis to run
+├── analyzer.py      # Analysis functions: overall stats, missing values, distributions, anomalies
 ├── visualizer.py    # Plotting and visualization
 │
 ├── output/
-│   └── plots/       # Generated plots
-|   └── anomaly/     # Generated anomaly plot
+│   └── plots/       # Histograms of numeric columns
+|   └── anomaly/     # Scatter plots highlighting anomalies
 │
 ├── requirements.txt
 └── README.md
