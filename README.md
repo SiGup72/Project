@@ -60,10 +60,10 @@ eda-agent/
 ├── decision.py      # Rule-based decision logic
 ├── analyzer.py      # EDA analysis functions
 ├── visualizer.py    # Plotting and visualization
-├── utils.py         # Helper utilities
 │
-├── outputs/
+├── output/
 │   └── plots/       # Generated plots
+|   └── anomaly/     # Generated anomaly plot
 │
 ├── requirements.txt
 └── README.md
