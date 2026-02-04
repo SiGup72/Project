@@ -96,7 +96,7 @@ eda-agent/
    ```
 2. Run the agent 
    ```bash
-   python main.py
+   py main.py
    ```
 
 ## 📈 Example Output
