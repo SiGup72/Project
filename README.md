@@ -1,11 +1,12 @@
 # DATA ANALYSIS AGENT
 ## 🔍Overview
-This project implements a Python-based Data Analysis Agent that automates Exploratory Data Analysis (EDA) for tabular datasets. At its core, the agent analyzes a given dataset by compressing the dataset schema and storing analysis insights, instead of repeatedly working on raw data or full analysis history.
+This project implements a Python-based interactive Data Analysis Agent that automates Exploratory Data Analysis (EDA) for tabular datasets. At its core, the agent analyzes a given dataset by compressing the dataset schema and storing analysis insights, instead of repeatedly working on raw data or full analysis history through a Streamlit-based web application.
 The agent autonomously:
 - Understands the structure of the dataset
 - Decides which EDA steps to perform
 - Stores insights in memory
 - Avoids redundant analysis
+- Presents results visually through an interactive app
 The entire system is built using pure Python and lightweight data analysis libraries.
 
 ## 🎯Motivation
@@ -19,34 +20,50 @@ This project was chosen to:
 - Understand how autonomous systems work
 - Build a reusable and extensible data analysis pipeline
 - Explore how intelligent agents can assist in data analysis without heavy AI/ML models
+- Showcase data analysis work in a user-friendly, interactive format
   
 ## ⚙️Features
-- Automatically summarizes the structure of a dataset (columns, data types, missing values)
-- Stores analysis results so the same checks are not repeated
-- Uses simple rule-based logic to decide which EDA step to run next
-- Identifies missing values in the dataset
-- Analyzes data distributions and detects outliers
-- Generates visualizations using matplotlib and seaborn
-- Built with a clean, modular, and easy-to-extend Python code structure
+- Upload any CSV dataset via a web interface
+- Automatically summarizes dataset structure (columns, types, missing values)
+- Rule-based decision engine selects relevant EDA steps
+- Stores analysis results to avoid redundant computation
+- Missing value analysis
+- Statistical summaries and distributions
+- Anomaly detection using Isolation Forest
+- Compact, dashboard-friendly visualizations
+- Modular and extensible Python codebase
+- Fully interactive Streamlit application
   
 ## 🧠How the Agent works
 The data analysis agent follows a structured workflow:
 ```
-Dataset (CSV)
-     ↓
-Schema Compression
-     ↓
+Dataset (CSV Upload)
+        ↓
+Schema Extraction
+        ↓
 Check Agent Memory
-     ↓
+        ↓
 Decision Engine
-     ↓
+        ↓
 EDA Analysis
-     ↓
+        ↓
 Store Insights
-     ↓
-Plots & Summary
+        ↓
+Interactive Plots & Summary
 ```
 This approach makes the agent efficient, stateful, and reusable.
+
+## 🖥️ Application Interface
+The Streamlit app allows users to:
+- Upload datasets
+- Preview data
+- Select which analysis to run:
+  - Overall summary
+  - Missing values
+  - Statistical distributions
+  - Anomaly detection
+- View results interactively
+- Generate clean, compact visualizations suitable for dashboards
 
 ## 📂Project Structure
 ```
@@ -54,6 +71,7 @@ eda-agent/
 │
 ├── titanic.csv      # Example dataset used for demonstration
 │
+├── app.py           # Streamlit web application
 ├── main.py          # Entry point – runs the agent and handles user menu 
 ├── schema.py        # Extracts dataset schema: column names, types, missing values
 ├── memory.py        # Stores insights in memory to avoid redundant analysis
@@ -76,6 +94,10 @@ eda-agent/
   - Used for numerical computations such as skewness and range calculations.
 - **matplotlib/seaborn** (visualizer.py)
   - Used for generating and saving EDA visualizations.
+- **scikit-learn**  (analyzer.py)
+  - Isolation Forest for anomaly detection
+- **Streamlit** (app.py)
+  - Interactive web application interface
 - **Python (3.12.10)**
   - Core language used to build the agent logic and workflow.
 
@@ -94,9 +116,9 @@ eda-agent/
    ```bash
    pip install -r requirements.txt
    ```
-2. Run the agent 
+2. Launch the Streamlit application 
    ```bash
-   py main.py
+   streamlit run app.py
    ```
 
 ## 📈 Example Output
